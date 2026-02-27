@@ -14,7 +14,7 @@ osx.kivy_version = 2.3.1
 android.permissions = WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,INTERNET
 
 # 安卓版本与架构
-android.api = 27
+android.api = 30
 android.minapi = 21
 android.arch = arm64-v8a
 android.accept_sdk_license = True
