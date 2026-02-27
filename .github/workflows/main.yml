@@ -18,10 +18,11 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Dependencies
+      -       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git zip unzip openjdk-17-jdk autoconf automake build-essential libssl-dev libffi-dev python3-dev libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libsndfile1-dev cmake pkg-config
+          # 增加了 autoconf-archive 和 libtool-bin，解决 autoreconf 错误
+          sudo apt-get install -y git zip unzip openjdk-17-jdk autoconf automake build-essential libssl-dev libffi-dev python3-dev libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libsndfile1-dev cmake pkg-config autoconf-archive libtool-bin
 
       - name: Build APK with Buildozer
         run: |
