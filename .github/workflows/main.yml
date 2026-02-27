@@ -26,7 +26,8 @@ jobs:
       - name: Build APK with Buildozer
         run: |
           pip install --upgrade pip
-          pip install buildozer cython
+          # 使用稳定版本的 Buildozer 和 Cython，避免兼容性问题
+          pip install buildozer==1.5.0 cython==0.29.33
           buildozer android debug
 
       - name: Upload APK Artifact
