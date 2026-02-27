@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.9"
-          cache: "pip"
 
       # 强制 Java 11（不要用 17；buildozer/p4a/旧 AGP 组合更稳）
       - name: Set up Java 11
